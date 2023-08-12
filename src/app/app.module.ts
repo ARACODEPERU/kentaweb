@@ -9,6 +9,7 @@ import { SliderComponent } from './Components/slider/slider.component';
 import { AboutComponent } from './Components/about/about.component';
 import { ServiceComponent } from './Components/service/service.component';
 import { FloatingMenuComponent } from './Widgets/floating-menu/floating-menu.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FloatingMenuComponent } from './Widgets/floating-menu/floating-menu.com
     SliderComponent,
     AboutComponent,
     ServiceComponent,
-    FloatingMenuComponent
+    FloatingMenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
