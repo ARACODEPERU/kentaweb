@@ -10,6 +10,13 @@ import { AboutComponent } from './Components/about/about.component';
 import { ServiceComponent } from './Components/service/service.component';
 import { FloatingMenuComponent } from './Widgets/floating-menu/floating-menu.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { ClientComponent } from './Components/client/client.component';
+import { VisionComponent } from './Components/vision/vision.component';
+import { ProjectComponent } from './Components/project/project.component';
+import { TestimonialComponent } from './Components/testimonial/testimonial.component';
+import { ContactSectionComponent } from './Components/contact-section/contact-section.component';
+import { FaqSectionComponent } from './Components/faq-section/faq-section.component';
+import { BlogPostComponent } from './Components/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { FooterComponent } from './Components/footer/footer.component';
     AboutComponent,
     ServiceComponent,
     FloatingMenuComponent,
-    FooterComponent
+    FooterComponent,
+    ClientComponent,
+    VisionComponent,
+    ProjectComponent,
+    TestimonialComponent,
+    ContactSectionComponent,
+    FaqSectionComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,
