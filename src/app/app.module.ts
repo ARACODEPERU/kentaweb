@@ -17,6 +17,7 @@ import { TestimonialComponent } from './Components/testimonial/testimonial.compo
 import { ContactSectionComponent } from './Components/contact-section/contact-section.component';
 import { FaqSectionComponent } from './Components/faq-section/faq-section.component';
 import { BlogPostComponent } from './Components/blog-post/blog-post.component';
+import { VentajasComponent } from './ventajas/ventajas.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BlogPostComponent } from './Components/blog-post/blog-post.component';
     TestimonialComponent,
     ContactSectionComponent,
     FaqSectionComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    VentajasComponent
   ],
   imports: [
     BrowserModule,
