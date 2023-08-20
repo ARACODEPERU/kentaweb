@@ -18,10 +18,14 @@ import { ContactSectionComponent } from './Components/contact-section/contact-se
 import { FaqSectionComponent } from './Components/faq-section/faq-section.component';
 import { BlogPostComponent } from './Components/blog-post/blog-post.component';
 import { VentajasComponent } from './Components/ventajas/ventajas.component';
+import { PageHeaderDefaultComponent } from './Components/page-header-default/page-header-default.component';
+import { NewstellerComponent } from './Components/newsteller/newsteller.component';
+
 import { HomeComponent } from './Pages/home/home.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { BlogComponent } from './Pages/blog/blog.component';
 import { ProyectsComponent } from './Pages/proyects/proyects.component';
+import { ArticlesComponent } from './Pages/articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,10 @@ import { ProyectsComponent } from './Pages/proyects/proyects.component';
     HomeComponent,
     ContactComponent,
     BlogComponent,
-    ProyectsComponent
+    ProyectsComponent,
+    PageHeaderDefaultComponent,
+    NewstellerComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
