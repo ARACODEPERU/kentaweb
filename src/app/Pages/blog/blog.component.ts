@@ -8,6 +8,7 @@ import { ApiKenthaService } from 'src/app/Services/api-kentha.service';
 })
 export class BlogComponent implements OnInit {
   articles: any;
+  categories: any;
   constructor(private apiService: ApiKenthaService) { }
 
   ngOnInit(): void {
@@ -19,9 +20,10 @@ export class BlogComponent implements OnInit {
     this.apiService.getDataBlog().subscribe(
       (data) => {
         // Aquí puedes procesar los datos que has obtenido de la API
-        console.log(data);
         this.articles = data.articles;
-        console.log(this.articles);
+        this.categories = data.categories;
+
+        console.log(this.articles)
       },
       (error) => {
         // Manejo de errores en caso de que la solicitud falle
