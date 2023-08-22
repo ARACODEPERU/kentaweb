@@ -7,6 +7,7 @@ import { ArticlesComponent } from './Pages/articles/articles.component';
 import { ProyectsComponent } from './Pages/proyects/proyects.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'proyects', component: ProyectsComponent },
   { path: 'blog', component: BlogComponent },

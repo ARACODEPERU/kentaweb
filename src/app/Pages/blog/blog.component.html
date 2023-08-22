@@ -5,18 +5,14 @@
 <div id="content" class="site-content">
   <div class="auto-container">
     <div class="row default_row">
-      <div
-        id="primary"
-        class="content-area col-lg-8 col-md-12 col-sm-12 col-xs-12"
-      >
+      <div id="primary"
+        class="content-area col-lg-8 col-md-12 col-sm-12 col-xs-12">
         <section class="blog_post_section one_column style_two">
           <!--===============spacing==============-->
           <div class="pd_top_90"></div>
           <!--===============spacing==============-->
-          <div
-            class="grid_show_case grid_layout clearfix"
-            *ngIf="articles && articles.length > 0"
-          >
+          <div class="grid_show_case grid_layout clearfix"
+          *ngIf="articles && articles.length > 0">
             <div class="grid_box _card" *ngFor="let article of articles">
               <div class="news_box default_style list_view has_images">
                 <div class="image img_hover-1">
@@ -27,9 +23,9 @@
                     class="img-fluid"
                     alt="img"
                   />
-                  <a href="#" class="categories"
-                    ><i class="icon-folder"></i>Compliance Audits</a
-                  >
+                  <a href="#" class="categories">
+                    <i class="icon-folder"></i>Compliance Audits
+                  </a>
                 </div>
                 <div class="content_box">
                   <div class="date">
@@ -45,7 +41,7 @@
                       How well this mistaken ideas off denouncing pleasure &amp;
                       praisings will give you complete.
                     </p>
-                    <a href="#" class="link__go">Read More</a>
+                    <a href="#" class="link__go">Leer Más</a>
                   </div>
                   <div class="auhtour_box">
                     <img
@@ -116,15 +112,15 @@
             class="widgets_grid_box"
             *ngIf="categories && categories.length > 0"
           >
-            <h2 class="widget-title">Categorías de publicaciones</h2>
-            <ul class="wp-block-categories">
+          <h2 class="widget-title">Categorías de publicaciones</h2>
+          <ul class="wp-block-categories">
               <li *ngFor="let category of categories">
                 <a href="#">{{ category.description }}</a>
               </li>
-            </ul>
+          </ul>
           </div>
           <div class="widgets_grid_box">
-            <h2 class="widget-title">Recent Posts</h2>
+            <h2 class="widget-title">Publicaciones Recientes</h2>
             <div class="widget_post_box">
               <div class="blog_in clearfix image_in">
                 <div class="image">
@@ -198,21 +194,6 @@
                   </h3>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="widgets_grid_box">
-            <h2 class="widget-title">Tag Clouds</h2>
-            <div class="wp-block-tag-cloud">
-              <a href="#">Appraisal</a>
-              <a href="#">Business</a>
-              <a href="#">Contract</a>
-              <a href="#">Data</a>
-              <a href="#">Efficiency</a>
-              <a href="#">Employment</a>
-              <a href="#">HR Procedures</a>
-              <a href="#">Legal</a>
-              <a href="#">Management</a>
-              <a href="#">Obligations</a>
             </div>
           </div>
           <!--===============spacing==============-->
