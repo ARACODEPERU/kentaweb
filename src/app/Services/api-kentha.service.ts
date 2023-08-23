@@ -13,8 +13,9 @@ export class ApiKenthaService {
 
 
   // Ejemplo de método para hacer una solicitud GET
-  getDataBlog(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/all`);
+  getDataBlog(page: number): Observable<any> {
+    //return this.http.get<any>(`${this.apiUrl}/all`);
+    return this.http.get<any>(`${this.apiUrl}/all?page=${page}`);
   }
 
   // Puedes crear más métodos para otras solicitudes

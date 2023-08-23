@@ -5,14 +5,18 @@
 <div id="content" class="site-content">
   <div class="auto-container">
     <div class="row default_row">
-      <div id="primary"
-        class="content-area col-lg-8 col-md-12 col-sm-12 col-xs-12">
+      <div
+        id="primary"
+        class="content-area col-lg-8 col-md-12 col-sm-12 col-xs-12"
+      >
         <section class="blog_post_section one_column style_two">
           <!--===============spacing==============-->
           <div class="pd_top_90"></div>
           <!--===============spacing==============-->
-          <div class="grid_show_case grid_layout clearfix"
-          *ngIf="articles && articles.length > 0">
+          <div
+            class="grid_show_case grid_layout clearfix"
+            *ngIf="articles && articles.length > 0"
+          >
             <div class="grid_box _card" *ngFor="let article of articles">
               <div class="news_box default_style list_view has_images">
                 <div class="image img_hover-1">
@@ -24,12 +28,15 @@
                     alt="img"
                   />
                   <a href="#" class="categories">
-                    <i class="icon-folder"></i>Compliance Audits
+                    <i class="icon-folder"></i>
+                    {{ article.category.description }}
                   </a>
                 </div>
                 <div class="content_box">
                   <div class="date">
-                    <span class="date_in_number">October 8, 2023</span>
+                    <span class="date_in_number">
+                      {{ article.created_at | formatDateString }}
+                    </span>
                   </div>
                   <div class="source">
                     <h2 class="title">
@@ -52,26 +59,40 @@
                       class="img-fluid"
                     />
                     <div class="contnet_a">
-                      <p>POSTED BY</p>
-                      <h4>Evan Thomas</h4>
+                      <p>PUBLICADO POR</p>
+                      <h4>
+                        {{ article.author.name }}
+                      </h4>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" *ngIf="links.length > 0">
             <div class="col-lg-12">
               <nav aria-label="Page navigation example">
                 <ul class="pagination text-center">
-                  <li class="active">
-                    <a href="blog-simple.html">1</a>
+                  <li *ngIf="current_page > 1" class="next_link">
+                    <a (click)="onPageChange(current_page - 1)">
+                      <div class="nav-next">
+                        <i class="fas fa-angle-left"></i>
+                      </div>
+                    </a>
                   </li>
-                  <li>
-                    <a href="blog-simple.html">2</a>
-                  </li>
-                  <li class="next_link">
-                    <a href="blog-simple.html">
+                  <ng-container *ngFor="let link of links; let indice = index">
+                    <li
+                      *ngIf="indice > 0 && indice < last_page + 1"
+                      [ngClass]="{ active: link.active }"
+                    >
+                      <a *ngIf="link.url" (click)="onPageChange(indice)">
+                        {{ link.label }}
+                      </a>
+                    </li>
+                  </ng-container>
+
+                  <li *ngIf="current_page < last_page" class="next_link">
+                    <a (click)="onPageChange(current_page + 1)">
                       <div class="nav-next">
                         <i class="fas fa-angle-right"></i>
                       </div>
@@ -112,85 +133,36 @@
             class="widgets_grid_box"
             *ngIf="categories && categories.length > 0"
           >
-          <h2 class="widget-title">Categorías de publicaciones</h2>
-          <ul class="wp-block-categories">
+            <h2 class="widget-title">Categorías de publicaciones</h2>
+            <ul class="wp-block-categories">
               <li *ngFor="let category of categories">
                 <a href="#">{{ category.description }}</a>
               </li>
-          </ul>
+            </ul>
           </div>
           <div class="widgets_grid_box">
             <h2 class="widget-title">Publicaciones Recientes</h2>
             <div class="widget_post_box">
-              <div class="blog_in clearfix image_in">
+              <div
+                *ngFor="let latest_article of latest_articles"
+                class="blog_in clearfix image_in"
+              >
                 <div class="image">
                   <img
                     decoding="async"
-                    src="assets/images/blog/blog-image-9.jpg"
-                    alt="img"
+                    [src]="latest_article.imagen"
+                    [alt]="latest_article.title"
                   />
                 </div>
                 <div class="content_inner">
                   <p class="post-date">
-                    <span class="icon-calendar"></span>October 8, 2023
+                    <span class="icon-calendar"></span>
+                    {{ latest_article.created_at | formatDateString }}
                   </p>
                   <h3>
-                    <a href="blog-single.html"
-                      >Why Should Business Payroll Outsourcing?</a
-                    >
-                  </h3>
-                </div>
-              </div>
-              <div class="blog_in clearfix image_in">
-                <div class="image">
-                  <img
-                    decoding="async"
-                    src="assets/images/blog/blog-image-8.jpg"
-                    alt="img"
-                  />
-                </div>
-                <div class="content_inner">
-                  <p class="post-date">
-                    <span class="icon-calendar"></span>October 8, 2023
-                  </p>
-                  <h3>
-                    <a href="blog-single.html"
-                      >Most Employees Support Measures</a
-                    >
-                  </h3>
-                </div>
-              </div>
-              <div class="blog_in clearfix image_in">
-                <div class="image">
-                  <img
-                    decoding="async"
-                    src="assets/images/blog/blog-image-7.jpg"
-                    alt="img"
-                  />
-                </div>
-                <div class="content_inner">
-                  <p class="post-date">
-                    <span class="icon-calendar"></span>October 8, 2023
-                  </p>
-                  <h3><a href="blog-single.html">How to Handle Employee</a></h3>
-                </div>
-              </div>
-              <div class="blog_in clearfix image_in">
-                <div class="image">
-                  <img
-                    decoding="async"
-                    src="assets/images/blog/blog-image-6.jpg"
-                    alt="img"
-                  />
-                </div>
-                <div class="content_inner">
-                  <p class="post-date">
-                    <span class="icon-calendar"></span>October 8, 2023
-                  </p>
-                  <h3>
-                    <a href="blog-single.html"
-                      >Retaining Good Employees &amp; Motivated</a
-                    >
+                    <a href="blog-single.html">
+                      {{ latest_article.title }}
+                    </a>
                   </h3>
                 </div>
               </div>
