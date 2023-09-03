@@ -28,6 +28,8 @@ import { BlogComponent } from './Pages/blog/blog.component';
 import { ProyectsComponent } from './Pages/proyects/proyects.component';
 import { ArticlesComponent } from './Pages/articles/articles.component';
 import { formatDateString } from './Pipes/formatDateString';
+import { ServicesComponent } from './Pages/services/services.component';
+import { AboutUsComponent } from './Pages/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { formatDateString } from './Pipes/formatDateString';
     PageHeaderDefaultComponent,
     NewstellerComponent,
     ArticlesComponent,
-    formatDateString
+    formatDateString,
+    ServicesComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
