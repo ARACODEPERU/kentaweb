@@ -16,7 +16,9 @@ export class NewstellerComponent {
       Validators.email
     ])
   });
+
   submitted = false;
+  
   constructor(private apiService: ApiKenthaService) { }
 
   
