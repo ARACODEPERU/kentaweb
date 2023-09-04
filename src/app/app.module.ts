@@ -28,6 +28,7 @@ import { BlogComponent } from './Pages/blog/blog.component';
 import { ProyectsComponent } from './Pages/proyects/proyects.component';
 import { ArticlesComponent } from './Pages/articles/articles.component';
 import { formatDateString } from './Pipes/formatDateString';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { formatDateString } from './Pipes/formatDateString';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
