@@ -7,7 +7,8 @@
     <div class="row default_row">
       <div
         id="primary"
-        class="content-area col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        class="content-area col-lg-8 col-md-12 col-sm-12 col-xs-12"
+      >
         <section class="blog_post_section one_column style_two">
           <!--===============spacing==============-->
           <div class="pd_top_90"></div>
@@ -39,7 +40,10 @@
                   </div>
                   <div class="source">
                     <h2 class="title">
-                      <a href="blog-single.html" rel="bookmark">
+                      <a
+                        [routerLink]="['/article', article.url]"
+                        rel="bookmark"
+                      >
                         {{ article.short_description }}
                       </a>
                     </h2>
@@ -68,39 +72,43 @@
               </div>
             </div>
           </div>
-          <div class="row" *ngIf="links.length > 0">
-            <div class="col-lg-12">
-              <nav aria-label="Page navigation example">
-                <ul class="pagination text-center">
-                  <li *ngIf="current_page > 1" class="next_link">
-                    <a (click)="onPageChange(current_page - 1)">
-                      <div class="nav-next">
-                        <i class="fas fa-angle-left"></i>
-                      </div>
-                    </a>
-                  </li>
-                  <ng-container *ngFor="let link of links; let indice = index">
-                    <li
-                      *ngIf="indice > 0 && indice < last_page + 1"
-                      [ngClass]="{ active: link.active }"
-                    >
-                      <a *ngIf="link.url" (click)="onPageChange(indice)">
-                        {{ link.label }}
+          <ng-container *ngIf="links">
+            <div class="row" *ngIf="links.length > 0">
+              <div class="col-lg-12">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination text-center">
+                    <li *ngIf="current_page > 1" class="next_link">
+                      <a (click)="onPageChange(current_page - 1)">
+                        <div class="nav-next">
+                          <i class="fas fa-angle-left"></i>
+                        </div>
                       </a>
                     </li>
-                  </ng-container>
+                    <ng-container
+                      *ngFor="let link of links; let indice = index"
+                    >
+                      <li
+                        *ngIf="indice > 0 && indice < last_page + 1"
+                        [ngClass]="{ active: link.active }"
+                      >
+                        <a *ngIf="link.url" (click)="onPageChange(indice)">
+                          {{ link.label }}
+                        </a>
+                      </li>
+                    </ng-container>
 
-                  <li *ngIf="current_page < last_page" class="next_link">
-                    <a (click)="onPageChange(current_page + 1)">
-                      <div class="nav-next">
-                        <i class="fas fa-angle-right"></i>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                    <li *ngIf="current_page < last_page" class="next_link">
+                      <a (click)="onPageChange(current_page + 1)">
+                        <div class="nav-next">
+                          <i class="fas fa-angle-right"></i>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-          </div>
+          </ng-container>
           <!--===============spacing==============-->
           <div class="pd_bottom_70"></div>
           <!--===============spacing==============-->

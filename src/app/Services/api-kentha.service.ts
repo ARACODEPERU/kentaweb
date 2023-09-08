@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ApiKenthaService {
 
-//private apiUrl = 'http://erp-app.test/api/blog_v1'; //dev
-private apiUrl = 'http://demo.delventas.co.uk/api/blog_v1'; //prod
+private apiUrl = 'http://erp-app.test/api/blog_v1'; //dev
+//private apiUrl = 'http://demo.delventas.co.uk/api/blog_v1'; //prod
 
   constructor(private http: HttpClient) { }
 
@@ -23,5 +23,11 @@ private apiUrl = 'http://demo.delventas.co.uk/api/blog_v1'; //prod
     return this.http.post<any>(`${this.apiUrl}/subscriber`, data);
   }
 
-  // Puedes crear más métodos para otras solicitudes
+  getDataArticle(slug: any): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/GetArticle/${slug}`);
+  }
+
+  getDataPage(page: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/page/all_data/${page}`);
+  }
 }
