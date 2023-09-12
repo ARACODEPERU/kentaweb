@@ -6,9 +6,8 @@
                <div class="pd_top_90"></div>
                <!--===============spacing==============-->
                <div class="auto-container">
-                  <div class="row">
+                  <!--<div class="row">
                      <div class="col-lg-8 m-auto">
-
                         <div class="title_all_box style_six text-center light_color">
                            <div class="title_sections">
                               <div class="before_title">
@@ -21,12 +20,28 @@
                                  but the majority have suffered alteration in some form believable.
                               </p>
                            </div>
-                           <!--===============spacing==============-->
                            <div class="pd_bottom_20"></div>
-                           <!--===============spacing==============-->
+                        </div>
+                     </div>
+                  </div>-->
+                  <div class="row">
+                     <div class="col-lg-8 m-auto">
+                        <div class="title_all_box style_six text-center light_color">
+                           <div class="title_sections">
+                              <div class="before_title">
+                                 <span class="icon-briefcase icon"></span>
+                                 {{ data[0].item.content }}
+                              </div>
+                              <div class="title"> {{ data[1].item.content }}</div>
+                              <p class="description_text">
+                                 {{ data[2].item.content }}
+                              </p>
+                           </div>
+                           <div class="pd_bottom_20"></div>
                         </div>
                      </div>
                   </div>
+                  <!--
                   <div class="row">
                      <div class="col-lg-12">
                         <div class="service_all_styles carousel owl_new_one">
@@ -48,6 +63,81 @@
                                     </div>
                                     <h2 class="entry-title">
                                        <a href="service-details.html">Gestión integral de proyectos HVAC</a>
+                                    </h2>
+                                    <p>Como empresa de HVAC, Podemos ocuparnos de todos los
+                                       aspectos de sus proyectos...</p>
+                                       <a href="#" target="_blank" rel="nofollow" class="theme-btn one"> Leer Más </a>
+                                 </div>
+                              </div>
+
+                              <div class="service_box  type_one clearfix">
+                                 <div class="image_box">
+                                    <img src="assets/images/service/service-image-5.jpg" class="img-fluid" alt="img" />
+                                    <div class="overlay"></div>
+                                 </div>
+                                 <div class="content_box">
+                                    <div class="icon_box clearfix">
+
+                                       <div class="icon_box_inner">
+                                          <i class="icon icon-thumbs-up icon"></i>
+                                       </div>
+
+                                    </div>
+                                    <h2 class="entry-title">
+                                       <a href="service-details.html">Mantenimiento Preventivo y Correctivo HVAC
+                                       </a>
+                                    </h2>
+                                    <p>Nuestros servicios incluyen la instalación, reparación
+                                       y mantenimiento... 
+                                    </p>
+                                    <a href="#" target="_blank" rel="nofollow" class="theme-btn one"> Leer Más </a>
+                                 </div>
+                              </div>
+
+                              <div class="service_box  type_one clearfix">
+                                 <div class="image_box">
+                                    <img src="assets/images/service/service-image-4.jpg" class="img-fluid" alt="img" />
+                                    <div class="overlay"></div>
+                                 </div>
+                                 <div class="content_box">
+                                    <div class="icon_box clearfix">
+                                       <div class="icon_box_inner">
+                                          <i class="icon icon-thumbs-up icon"></i>
+                                       </div>
+                                    </div>
+                                    <h2 class="entry-title"><a href="service-details.html">Eléctricidad, estructuras netálicas</a></h2>
+                                    <p>Nuestra empresa está capacitada para realizar
+                                       todo tipo de servicios en diversas áreas...
+                                    </p>
+                                    <a href="#" target="_blank" rel="nofollow" class="theme-btn one"> Leer Más </a>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>-->
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="service_all_styles carousel owl_new_one">
+                           <div class="owl_nav_none owl_dots_none owl_type_two theme_carousel owl-theme owl-carousel"
+                              data-options='{"loop": true, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "3" } , "1000":{ "items" : "3" }}}'>
+
+                              <div class="service_box  type_one clearfix">
+                                 <div class="image_box">
+                                    <img [src]="data[3].item.content" class="img-fluid" alt="img" />
+                                    <div class="overlay"></div>
+                                 </div>
+                                 <div class="content_box">
+                                    <div class="icon_box clearfix">
+
+                                       <div class="icon_box_inner">
+                                          <i class="icon icon-thumbs-up icon"></i>
+                                       </div>
+
+                                    </div>
+                                    <h2 class="entry-title">
+                                       <a href="service-details.html">{{ data[4].item.content }}</a>
                                     </h2>
                                     <p>Como empresa de HVAC, Podemos ocuparnos de todos los
                                        aspectos de sus proyectos...</p>

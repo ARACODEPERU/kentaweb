@@ -2,9 +2,20 @@
 
 <!--===============PAGE CONTENT==============-->
          <div id="content" class="site-content ">
-            <!---about us-->
-            <app-about></app-about>
-            <!---about us end-->
+            <ng-container *ngIf="pageData">
+               <ng-container *ngFor="let page of pageData">
+                 <ng-container [ngSwitch]="page.sections.component_id">
+                   
+                     <!-- About Component -->
+                     <app-about
+                     *ngSwitchCase="'acerca_de_nosotros_4'"
+                     [data]="page.sections.items"
+                        ></app-about>
+                     <!---about us end-->
+                 </ng-container>
+               </ng-container>
+             </ng-container>
+            
             <!---service--->
             <section class="service-icon-section bg_light_1">
             <!--===============spacing==============-->

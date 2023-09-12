@@ -4,15 +4,31 @@
       <ng-container [ngSwitch]="page.sections.component_id">
         <!-- Slider Component -->
         <app-slider
-          *ngSwitchCase="'carrusel_1'"
+          *ngSwitchCase="'slider_01_2'"
           [data]="page.sections.items"
         ></app-slider>
 
         <!-- About Component -->
         <app-about
-          *ngSwitchCase="'acerca_de_nosotros_3'"
+          *ngSwitchCase="'acerca_de_nosotros_4'"
           [data]="page.sections.items"
         ></app-about>
+        <!---about us end-->
+
+        
+        <!--client-->
+        <app-client
+        *ngSwitchCase="'clientes_5'"
+        [data]="page.sections.items"
+        ></app-client>
+        <!---client end-->
+        
+        <!---service--->
+        <app-service
+        *ngSwitchCase="'nuestros_servicios_6'"
+        [data]="page.sections.items"
+        ></app-service>
+        <!---service end-->
 
         <!--testimonial-->
         <app-testimonial
@@ -30,13 +46,6 @@
       </ng-container>
     </ng-container>
 
-    <!---about us end-->
-    <!--client-->
-    <app-client></app-client>
-    <!---client end-->
-    <!---service--->
-    <app-service></app-service>
-    <!---service end-->
     <!--vision-->
     <app-ventajas></app-ventajas>
     <!---vision end-->
