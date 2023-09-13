@@ -28,6 +28,13 @@
         ></app-service>
         <!---service end-->
 
+        <!--ventajas-->
+        <app-ventajas
+        *ngSwitchCase="'ventajas_7'"
+        [data]="page.sections.items"
+        ></app-ventajas>
+        <!---ventajas end-->
+
         <!--testimonial-->
         <app-testimonial
           *ngSwitchCase="'testimonios_4'"
@@ -44,9 +51,7 @@
       </ng-container>
     </ng-container>
 
-    <!--vision-->
-    <app-ventajas></app-ventajas>
-    <!---vision end-->
+
     <!--project-->
     <app-project></app-project>
     <!---vision end-->
