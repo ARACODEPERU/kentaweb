@@ -36,9 +36,17 @@
         ></app-ventajas>
         <!---ventajas end-->
 
+        
+        <!--project-->
+        <app-project
+        *ngSwitchCase="'nuestros_proyectos_8'"
+        [data]="page.sections.items"
+        ></app-project>
+        <!---vision end-->
+
         <!--testimonial-->
         <app-testimonial
-          *ngSwitchCase="'testimonios_4'"
+          *ngSwitchCase="'testimonios_9'"
           [data]="page.sections.items"
         ></app-testimonial>
         <!---vision end-->
@@ -53,9 +61,6 @@
     </ng-container>
 
 
-    <!--project-->
-    <app-project></app-project>
-    <!---vision end-->
 
     <!--contact-section-->
     <app-contact-section></app-contact-section>
