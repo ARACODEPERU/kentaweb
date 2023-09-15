@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-contact-section',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-section.component.css']
 })
 export class ContactSectionComponent {
+  @Input() data: any; 
 
 }

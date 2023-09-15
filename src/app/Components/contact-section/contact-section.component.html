@@ -1,12 +1,12 @@
 
-            <!---contact-->
-            <section class="contact-section bg_op_1 box_shadow_2"
+<!---contact-->
+<section class="contact-section bg_op_1 box_shadow_2"
                style="background: url(assets/images/consult-bg.jpg);">
                <div class="container">
                   <div class="row">
                      <div class="col-lg-5 col-md-12">
                         <div class="image_box mr_top_minus_50">
-                           <img src="assets/images/cosnsult-image.png" class="img-fluid" alt="consult" />
+                           <img [src]="data[0].item.content" class="img-fluid" alt="consult" />
                         </div>
                      </div>
                      <div class="col-lg-7 col-md-12">
@@ -17,9 +17,9 @@
                            <div class="title_sections">
                               <div class="before_title">
                                  <span class="icon-briefcase icon"></span>
-                                 CONTACTANOS
+                                 {{ data[1].item.content }}
                               </div>
-                              <div class="title">Obtenga una consultoría gratuita ahora mismo aquí</div>
+                              <div class="title">{{ data[2].item.content }}</div>
                               <p>We help you to see world differently , discover oppurtunities you may never have
                                  imagined.</p>
                            </div>
@@ -59,6 +59,6 @@
                      </div>
                   </div>
                </div>
-            </section>
-            <!--contact end-->
+</section>
+<!--contact end-->
             

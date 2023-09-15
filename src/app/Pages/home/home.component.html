@@ -51,6 +51,13 @@
         ></app-testimonial>
         <!---vision end-->
 
+        <!--contact-section-->
+        <app-contact-section
+        *ngSwitchCase="'contactanos_10'"
+        [data]="page.sections.items"
+        ></app-contact-section>
+        <!---vision end-->
+
         <!-- Agregar más casos según sea necesario -->
 
         <!-- Default Case (por si no coincide con ninguno) -->
@@ -62,9 +69,6 @@
 
 
 
-    <!--contact-section-->
-    <app-contact-section></app-contact-section>
-    <!---vision end-->
     <!--faq-section-->
     <app-faq-section></app-faq-section>
     <!---vision end-->
