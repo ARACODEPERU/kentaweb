@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ApiKenthaService {
 
-private apiUrl = 'http://base-app.test/api/blog_v1'; //dev
-//private apiUrl = 'http://demo.delventas.co.uk/api/blog_v1'; //prod
+//private apiUrl = 'http://base-app.test/api/blog_v1'; //dev
+private apiUrl = 'http://demo.delventas.co.uk/api/blog_v1'; //prod
 
   constructor(private http: HttpClient) { }
 

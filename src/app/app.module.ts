@@ -70,7 +70,8 @@ import { AboutUsComponent } from './Pages/about-us/about-us.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

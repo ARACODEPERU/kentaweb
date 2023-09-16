@@ -58,6 +58,13 @@
         ></app-contact-section>
         <!---vision end-->
 
+        <!--Puntos Claves - section-->
+        <app-faq-section
+        *ngSwitchCase="'puntos_claves_11'"
+        [data]="page.sections.items"
+        ></app-faq-section>
+        <!---Puntos Claves -  end-->
+
         <!-- Agregar más casos según sea necesario -->
 
         <!-- Default Case (por si no coincide con ninguno) -->
@@ -69,9 +76,6 @@
 
 
 
-    <!--faq-section-->
-    <app-faq-section></app-faq-section>
-    <!---vision end-->
     <!--blog-post-->
     <app-blog-post></app-blog-post>
     <!---vision end-->
