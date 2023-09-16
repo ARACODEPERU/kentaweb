@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-blog-post',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog-post.component.css']
 })
 export class BlogPostComponent {
-
+  @Input() data: any; 
 }

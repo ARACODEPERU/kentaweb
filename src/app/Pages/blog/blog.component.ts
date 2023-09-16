@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit, Input  } from '@angular/core';
 import { ApiKenthaService } from 'src/app/Services/api-kentha.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { ApiKenthaService } from 'src/app/Services/api-kentha.service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  
+  @Input() data: any; 
+
+
   articles: any;
   links: any;
   last_page: any;
