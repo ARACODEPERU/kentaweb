@@ -34,6 +34,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ServicesComponent } from './Pages/services/services.component';
 import { AboutUsComponent } from './Pages/about-us/about-us.component';
 
+import { InicioComponent } from './Paginas/inicio/inicio.component';
+import { NosotrosComponent } from './Paginas/nosotros/nosotros.component';
+import { ServiciosComponent } from './Paginas/servicios/servicios.component';
+
 
 @NgModule({
   declarations: [
@@ -62,7 +66,10 @@ import { AboutUsComponent } from './Pages/about-us/about-us.component';
     ArticlesComponent,
     formatDateString,
     ServicesComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    InicioComponent,
+    NosotrosComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,
