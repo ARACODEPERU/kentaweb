@@ -1,77 +1,22 @@
 
 <app-page-header-default></app-page-header-default>
 
-
+<!--===============PAGE CONTENT==============-->
 <div id="content" class="site-content ">
-    <!--===============spacing==============-->
-    <div class="pd_top_90"></div>
-    <!--===============spacing==============-->
-    <section class="creote-service-box">
-       <div class="container">
-          <div class="row">
-             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="service_post style_one">
-                   <div class="image">
-                      <div class="overlay"></div>
-                      <img loading="lazy" width="500" height="500" src="assets/images/service/service-image-6.jpg"
-                         alt="img">
-                   </div>
-                   <div class="service_content icon_yes">
-                      <div class="icon_box">
-                         <span class="icon icon-thumbs-up icon"></span>
-                      </div>
-                      <h2 class="title_service"><a href="#" rel="bookmark">Gestión integral de proyectos HVAC</a></h2>
-                      <p class="short_desc">Como empresa de HVAC, Podemos ocuparnos de todos los
-                        aspectos de sus proyectos...</p>
-                      <a class="read_more" href="#"> Leer Más<i class="icon-right-arrow-long"></i></a>
-                   </div>
-                </div>
-             </div>
-             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="service_post style_one">
-                   <div class="image">
-                      <div class="overlay"></div>
-                      <img loading="lazy" width="500" height="500" src="assets/images/service/service-image-5.jpg"
-                         alt="img">
-                   </div>
-                   <div class="service_content icon_yes">
-                      <div class="icon_box">
-                         <span class="icon icon-thumbs-up icon"></span>
-                      </div>
-                      <h2 class="title_service"><a href="#" rel="bookmark">Mantenimiento Preventivo y Correctivo HVAC</a></h2>
-                      <p class="short_desc">Nuestros servicios incluyen la instalación, reparación
-                        y mantenimiento... 
-                      </p>
-                      <a class="read_more" href="#"> Leer Más<i class="icon-right-arrow-long"></i></a>
-                   </div>
-                </div>
-             </div>
-             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="service_post style_one">
-                   <div class="image">
-                      <div class="overlay"></div>
-                      <img loading="lazy" width="500" height="500" src="assets/images/service/service-image-4.jpg"
-                         alt="img">
-                   </div>
-                   <div class="service_content icon_yes">
-                      <div class="icon_box">
-                         <span class="icon icon-thumbs-up icon"></span>
-                      </div>
-                      <h2 class="title_service"><a href="#" rel="bookmark">Eléctricidad, estructuras netálicas</a></h2>
-                      <p class="short_desc">Nuestra empresa está capacitada para realizar
-                        todo tipo de servicios en diversas áreas...
-                      </p>
-                      <a class="read_more" href="#"> Leer Más<i class="icon-right-arrow-long"></i></a>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </section>
-    <!--===============spacing==============-->
-    <div class="pd_top_80"></div>
-    <!--===============spacing==============-->
-     <!---newsteller--->
-  <app-newsteller></app-newsteller>
+    <ng-container *ngIf="pageData">
+       <ng-container *ngFor="let page of pageData">
+         <ng-container [ngSwitch]="page.sections.component_id">
+            <div class="pd_top_90"></div>
+            <app-service-two *ngSwitchCase="'nuestros_servicios_6'" [data]="page.sections.items"></app-service-two><!---service--->
+            <div class="pd_top_80"></div><!-- Agregar más casos según sea necesario -->
+            <!-- Default Case (por si no coincide con ninguno) -->
+            <div *ngSwitchDefault> Componente predeterminado o manejo de error aquí</div>
+         </ng-container>
+       </ng-container>
+    </ng-container>
+            
+    
+    <!---newsteller--->
+    <app-newsteller></app-newsteller>
     <!---newsteller end--->
- </div>
+</div>

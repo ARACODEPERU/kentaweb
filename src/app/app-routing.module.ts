@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './Paginas/inicio/inicio.component';
 import { NosotrosComponent } from './Paginas/nosotros/nosotros.component';
 import { ServiciosComponent } from './Paginas/servicios/servicios.component';
+import { ProyectosComponent } from './Paginas/proyectos/proyectos.component';
 
 import { HomeComponent } from './Pages/home/home.component';
 import { AboutUsComponent } from './Pages/about-us/about-us.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'servicios', component: ServiciosComponent },
+  { path: 'proyectos', component: ProyectosComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'services', component: ServicesComponent },

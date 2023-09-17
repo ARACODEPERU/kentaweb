@@ -14,6 +14,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ClientComponent } from './Components/client/client.component';
 import { VisionComponent } from './Components/vision/vision.component';
 import { ProjectComponent } from './Components/project/project.component';
+import { ServiceTwoComponent } from './Components/service-two/service-two.component';
 import { TestimonialComponent } from './Components/testimonial/testimonial.component';
 import { ContactSectionComponent } from './Components/contact-section/contact-section.component';
 import { FaqSectionComponent } from './Components/faq-section/faq-section.component';
@@ -37,6 +38,8 @@ import { AboutUsComponent } from './Pages/about-us/about-us.component';
 import { InicioComponent } from './Paginas/inicio/inicio.component';
 import { NosotrosComponent } from './Paginas/nosotros/nosotros.component';
 import { ServiciosComponent } from './Paginas/servicios/servicios.component';
+import { ProyectosComponent } from './Paginas/proyectos/proyectos.component';
+import { ProjectTwoComponent } from './Components/project-two/project-two.component';
 
 
 @NgModule({
@@ -69,7 +72,10 @@ import { ServiciosComponent } from './Paginas/servicios/servicios.component';
     AboutUsComponent,
     InicioComponent,
     NosotrosComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    ProyectosComponent,
+    ServiceTwoComponent,
+    ProjectTwoComponent
   ],
   imports: [
     BrowserModule,
