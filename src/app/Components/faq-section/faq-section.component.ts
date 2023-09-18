@@ -9,6 +9,17 @@ import { Component, Input} from '@angular/core';
 export class FaqSectionComponent {
   @Input() data: any; 
   
+  activeIndex = 1; // Índice del elemento activo inicialmente
+
+  toggleAccordion(index: number) {
+    if (this.activeIndex === index) {
+      // Si haces clic en el elemento activo, ciérralo
+      this.activeIndex = -1;
+    } else {
+      // De lo contrario, abre el elemento seleccionado
+      this.activeIndex = index;
+    }
+  }
 }
 
 
