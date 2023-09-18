@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-contact-section',
   templateUrl: './contact-section.component.html',

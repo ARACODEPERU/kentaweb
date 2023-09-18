@@ -5,6 +5,7 @@ import { InicioComponent } from './Paginas/inicio/inicio.component';
 import { NosotrosComponent } from './Paginas/nosotros/nosotros.component';
 import { ServiciosComponent } from './Paginas/servicios/servicios.component';
 import { ProyectosComponent } from './Paginas/proyectos/proyectos.component';
+import { ContactoComponent } from './Paginas/contacto/contacto.component';
 
 import { HomeComponent } from './Pages/home/home.component';
 import { AboutUsComponent } from './Pages/about-us/about-us.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'proyectos', component: ProyectosComponent },
+  { path: 'contacto', component: ContactoComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'services', component: ServicesComponent },

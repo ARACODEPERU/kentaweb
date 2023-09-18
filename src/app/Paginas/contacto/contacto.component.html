@@ -1,5 +1,5 @@
 
-<div class="page_header_default style_one ">
+<div class="page_header_default style_one">
     <div class="parallax_cover">
        <div class="simpleParallax">
             <img src="assets/images/page-header-default.jpg" alt="bg_image"
@@ -12,7 +12,7 @@
              <div class="col-md-12">
                 <div class="banner_title_inner">
                    <div class="title_page">
-                      Pagina
+                      Contacto
                    </div>
                 </div>
              </div>
@@ -20,7 +20,7 @@
                 <div class="breadcrumbs creote">
                    <ul class="breadcrumb m-auto">
                       <li><a href="inicio">Home</a></li>
-                      <li class="active">Pagina</li>
+                      <li class="active">Contacto</li>
                    </ul>
                 </div>
              </div>
@@ -28,3 +28,18 @@
        </div>
     </div>
 </div>
+
+<div id="content" class="site-content">
+    <ng-container *ngIf="pageData">
+      <ng-container *ngFor="let page of pageData">
+        <ng-container [ngSwitch]="page.sections.component_id">
+          <app-contact-section-two *ngSwitchCase="'contacto__seccion_02_14'" [data]="page.sections.items"></app-contact-section-two>
+          <!-- Agregar más casos según sea necesario -->
+          <!-- Default Case (por si no coincide con ninguno) -->
+          <div *ngSwitchDefault> Componente predeterminado o manejo de error aquí</div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+    <app-newsteller></app-newsteller>
+</div>
+
