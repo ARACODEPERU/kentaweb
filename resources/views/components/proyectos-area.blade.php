@@ -52,7 +52,7 @@
                 <div class="col-lg-6">
                     <div class="text-md-end">
                         <div class="theme_btn_all color_one">
-                            <a href="#" class="theme-btn one">
+                            <a href="{{ route('web_proyectos') }}" class="theme-btn one">
                                 Más Proyectos
                             </a>
                         </div>

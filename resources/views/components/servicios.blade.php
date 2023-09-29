@@ -27,41 +27,39 @@
       
 
       <div class="row">
-         <div class="col-lg-12">
-            <div class="service_all_styles">
-               <div class="container">
-                  <div class="row">
+        <div class="col-lg-12">
+           <div class="service_all_styles carousel owl_new_one">
+              <div class="owl_nav_none owl_dots_none owl_type_two theme_carousel owl-theme owl-carousel"
+                 data-options='{"loop": true, "margin": 30, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "3" } , "1000":{ "items" : "3" }}}'>
 
-                    @foreach ($data as $k => $group)   
-                                <div class="col-md-4">
-                                    <div class="service_box  type_one clearfix">
-                                    <div class="image_box">
-                                        <img src="{{ $group->item->items[0]->content }}" class="img-fluid" alt="img" />
-                                        <div class="overlay"></div>
-                                    </div>
-                                    <div class="content_box">
-                                        <div class="icon_box clearfix">
-                                            <div class="icon_box_inner">
-                                                <i class="icon icon-thumbs-up icon"></i>
-                                            </div>
-                                        </div>
-                                        <h2 class="entry-title">
-                                            <a href="">{{ $group->item->items[1]->content }}</a>
-                                        </h2>
-                                        <p>{{ $group->item->items[2]->content }}</p>
+                 @foreach ($data as $k => $group)  
+                 <div class="service_box  type_one clearfix">
+                    <div class="image_box">
+                       <img src="{{ $group->item->items[0]->content }}" class="img-fluid" alt="img" />
+                       <div class="overlay"></div>
+                    </div>
+                    <div class="content_box">
+                       <div class="icon_box clearfix">
 
-                                       {{-- <a rel="nofollow" class="theme-btn one service-toggler"> Leer Más </a>  OCULTO --}}
-                                       {{-- Modal de boostrap para cargar la descripciópn del servicio {{ $group->item->items[3]->content }} --}}
-                                    </div>
-                                    </div>
-                                </div>
-                        
-                    @endforeach
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>   
+                          <div class="icon_box_inner">
+                             <i class="icon icon-thumbs-up icon"></i>
+                          </div>
+
+                       </div>
+                       <h2 class="entry-title">
+                          <a href="service-details.html">{{ $group->item->items[1]->content }}</a>
+                       </h2>
+                       <p>{{ $group->item->items[2]->content }}</p>
+                    </div>
+                 </div>
+                 @endforeach
+
+              </div>
+           </div>
+        </div>
+    </div>
+
+  
    </div>
    <!--===============spacing==============-->
    <div class="pd_bottom_90"></div>
@@ -170,6 +168,6 @@
       </div>
   </div>
 
-   <!-- END MODAL -->>
+   <!-- END MODAL -->
 <!--service end-->
 </div>
