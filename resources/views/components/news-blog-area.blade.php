@@ -43,17 +43,17 @@
                                     <ul class="post-info clearfix">
                                         <li class="authour_name">
                                             <i class="fa fa-user"></i>
-                                            <a href="#"> {{ $article->author->name }} </a>
+                                            <a href="{{ route('blog_article_by_url', $article->url) }}"> {{ $article->author->name }} </a>
                                         </li>
                                         <li class="date">
-                                            <a href="blog-single.html">
+                                            <a href="{{ route('blog_article_by_url', $article->url) }}">
                                                 <i class="fa fa-calendar"></i>
                                                 {{ formatShortMonth($article->created_at) }}
                                             </a>
                                         </li>
                                     </ul>
                                     <h2 class="entry-title">
-                                        <a href="blog-single.html">
+                                        <a href="{{ route('blog_article_by_url', $article->url) }}">
                                             {{ $article->title }}
                                         </a>
                                     </h2>
