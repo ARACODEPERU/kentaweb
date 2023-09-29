@@ -1,10 +1,7 @@
 <section class="slider style_page_thirteen nav_position_one position-relative">
-    <!--- slider-->
     @if (count($data) >= 0)
-
         <div class="banner_carousel owl-carousel owl_nav_block owl_dots_none theme_carousel owl-theme"
             data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" } , "1000":{ "items" : "1" }}}'>
-
             @foreach ($data as $k => $group)
                 <div class="slide-item-content">
                     <div class="slide-item content_center">
@@ -12,33 +9,34 @@
                         </div>
                         <div class="medium-container">
                             <div class="row align-items-center">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto">
-                                    <div class="slider_content">
-                                        <br>
+                                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 m-auto">
+                                    <div class="slider_content " style="height: 436px">
                                         <h6 class="animate_left">
                                             {{ $group->item->items[1]->content }}
                                         </h6>
                                         <h1 class="animate_up">
                                             {{ $group->item->items[2]->content }}
                                         </h1>
-                                        <br>
+                                        {{-- <p class="animate_right pd_bottom_40">
+                                            Who are so beguiled and demoralized the charms Long established fact <br>
+                                            that a
+                                            reader will be distracted
+                                        </p> --}}
                                         <ul class="animate_down">
                                             <li class="theme_btn_all color_two">
-                                                <a href="{{ route('web_servicios') }}" class="theme-btn one">Servicios</a>
+                                                <a href="{{ route('web_servicios') }}"
+                                                    class="theme-btn one">Servicios</a>
                                             </li>
-                                            <li class="theme_btn_all ">
-                                                <a href="{{ route('web_proyectos') }}" class="theme-btn one color_white">Proyectos</a>
+                                            <li class="theme_btn_all">
+                                                <a href="{{ route('web_proyectos') }}"
+                                                    class="theme-btn one color_white">Proyectos</a>
                                             </li>
                                         </ul>
-                                        <br>
-                                        <br>
-                                        <br>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             @endforeach
         </div>
@@ -73,7 +71,5 @@
                 </path>
             </svg>
         </div>
-
-        <!---slider-end--->
     @endif
 </section>
