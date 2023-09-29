@@ -33,12 +33,7 @@ style="background: url(assets/images/consult-bg.jpg)"
       <div class="pd_bottom_35"></div>
       <!--===============spacing==============-->
       <div class="row gutter_25px">
-        <div class="col-lg-4 col-md-12">
-          <div class="theme_btn_all color_one">
-            <a href="{{ route('web_contacto') }}" class="theme-btn one"> Contactanos </a>
-          </div>
-        </div>
-        <div class="col-lg-8 col-md-12">
+        <div class="col-lg-8 col-md-12" style="padding: 7px 0px;">
           <div class="footer_contact_list dark_color type_one">
             <div class="same_contact phone">
               <span class="icon-telephone"></span>
@@ -47,6 +42,11 @@ style="background: url(assets/images/consult-bg.jpg)"
                 <a href="tel:+56 973118480">+56 973118480 </a>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12" style="padding: 7px 0px;">
+          <div class="theme_btn_all color_one">
+            <a href="{{ route('web_contacto') }}" class="theme-btn one"> Contactanos </a>
           </div>
         </div>
       </div>

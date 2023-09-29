@@ -80,37 +80,37 @@
                     <div class="footer_widgets clearfix">
                         <ul class="list_items_new_box type_one ">
                             <li>
-                                <a routerLink="inicio" class="color_white">
+                                <a  href="{{ route('cms_principal') }}"  class="color_white">
                                     <span class=" icon-right-arrow icon"></span>
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a routerLink="nosotros" class="color_white">
+                                <a href="{{ route('web_nosotros') }}" class="color_white">
                                     <span class=" icon-right-arrow icon"></span>
                                     Nosotros
                                 </a>
                             </li>
                             <li>
-                                <a routerLink="servicios" class="color_white">
+                                <a href="{{ route('web_servicios') }}" class="color_white">
                                     <span class=" icon-right-arrow icon"></span>
                                     Servicios
                                 </a>
                             </li>
                             <li>
-                                <a routerLink="proyectos" class="color_white">
+                                <a href="{{ route('web_proyectos') }}" class="color_white">
                                     <span class=" icon-right-arrow icon"></span>
                                     Proyectos
                                 </a>
                             </li>
                             <li>
-                                <a routerLink="blog" class="color_white">
+                                <a href="{{ route('blog_principal') }}" class="color_white">
                                     <span class=" icon-right-arrow icon"></span>
                                     Blog
                                 </a>
                             </li>
                             <li>
-                                <a routerLink="contacto" class="color_white">
+                                <a href="{{ route('web_contacto') }}" class="color_white">
                                     <span class=" icon-right-arrow icon"></span>
                                     Contacto
                                 </a>

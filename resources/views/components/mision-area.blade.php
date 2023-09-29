@@ -31,7 +31,7 @@
                             <span class=" icon-bow-and-arrow"></span>
                          </div>
                          <div class="txt_content">
-                            <h3><a href="#" target="_blank" rel="nofollow">{{ $data[3]->item->content }}</a></h3>
+                            <h3><a  href="{{ route('web_contacto') }}" rel="nofollow">{{ $data[3]->item->content }}</a></h3>
                             <p>{{ $data[4]->item->content }}</p>
                          </div>
                       </div>
@@ -44,11 +44,11 @@
                             <span class=" icon-growth"></span>
                          </div>
                          <div class="txt_content">
-                            <h3><a href="#" target="_blank" rel="nofollow">{{ $data[5]->item->content }}</a></h3>
+                            <h3><a  href="{{ route('web_contacto') }}" rel="nofollow">{{ $data[5]->item->content }}</a></h3>
                             <p>{{ $data[6]->item->content }}</p>
                             <br>
                             <div class="btn_center">
-                               <a href="#" target="_blank" rel="nofollow" class="theme-btn one">Contactanos</a>
+                               <a  href="{{ route('web_contacto') }}" rel="nofollow" class="theme-btn one">Contactanos</a>
                             </div>
                          </div>
                       </div>

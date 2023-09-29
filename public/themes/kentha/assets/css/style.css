@@ -513,3 +513,20 @@ input[type="password"]{
   padding: 0px;
 }
 
+
+
+
+@media(max-width:768px){
+
+
+
+  /*ESTILOS YISUSWEB*/
+  .top-links li{
+    padding: 3px 0px!important;
+  }
+  .contact_info_two{
+      display: none!important;
+  }
+   /*ESTILOS YISUSWEB*/
+
+}

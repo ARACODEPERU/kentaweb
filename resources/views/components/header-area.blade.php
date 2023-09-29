@@ -51,9 +51,9 @@
                     <nav class="inner_box">
                         <div class="header_logo_box">
                             <a href="{{ route('cms_principal') }}" class="logo navbar-brand">
-                                <img src="{{ asset('themes/kentha/assets/images/HVAC_logo.png') }}" alt="Creote"
+                                <img src="{{ asset('themes/kentha/assets/images/logoKentha.svg') }}" alt="Kentha"
                                     class="logo_default">
-                                <img src="{{ asset('themes/kentha/assets/images/HVAC_logo.png') }}" alt="Creote"
+                                <img src="{{ asset('themes/kentha/assets/images/logoKentha.svg') }}" alt="Kentha"
                                     class="logo__sticky">
                             </a>
                         </div>
