@@ -25,12 +25,12 @@
 </script>
 
 <template>
-    <AppLayout title="Blog Categorias">
+    <AppLayout title="Blog Suscriptores">
         <div>
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
                 <div class="col-span-6 p-4 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
                     <div class="flex items-center justify-between pb-4 bg-white dark:bg-gray-900">
-                        <form @submit.prevent="form.get(route('roles.index'))">
+                        <form @submit.prevent="form.get(route('blog_subscriber'))">
                             <label for="table-search" class="sr-only">Search</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -56,20 +56,36 @@
                                     </th> -->
                                     <th scope="col" class="px-6 py-4">
                                         <div class="flex items-center">
+                                            Fecha
+                                            <a href="">
+                                                <img style="max-width: 12px;height: auto;" class="svg-img" src="/icons-svg/clasificar.svg" alt="Descripción de la imagen">
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-4">
+                                        <div class="flex items-center">
                                             Suscriptores
                                             <a href="">
                                                 <img style="max-width: 12px;height: auto;" class="svg-img" src="/icons-svg/clasificar.svg" alt="Descripción de la imagen">
                                             </a>
                                         </div>
                                     </th>
-                                    <!-- <th scope="col" class="px-6 py-4">
+                                     <!-- <th scope="col" class="px-6 py-4">
                                         <div class="flex items-center">
-                                            Estado
+                                            Asunto de mensaje
                                             <a href="">
                                                 <img style="max-width: 12px;height: auto;" class="svg-img" src="/icons-svg/clasificar.svg" alt="Descripción de la imagen">
                                             </a>
                                         </div>
                                     </th> -->
+                                    <th scope="col" class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            Mensaje
+                                            <a href="">
+                                                <img style="max-width: 12px;height: auto;" class="svg-img" src="/icons-svg/clasificar.svg" alt="Descripción de la imagen">
+                                            </a>
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -81,12 +97,17 @@
                                      
                                     </td> -->
                                     <td class="border px-6 py-4">
+                                        {{ formatDateTime(subscriber.created_at) }}
+                                    </td>
+                                    <td class="border px-6 py-4">
                                         {{ subscriber.email }}
                                     </td>
                                     <!-- <td class="border px-6 py-4">
-                                        <span v-if="subscriber.status" class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">Activo</span>
-                                        <span v-else class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400">Inactivo</span>
+                                         {{ subscriber.subject }}
                                     </td> -->
+                                    <td class="border px-6 py-4">
+                                        {{ subscriber.message }}
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -99,3 +120,11 @@
         </div>
     </AppLayout>
 </template>
+<script>
+function formatDateTime(dateTimeString) {
+  const date = new Date(dateTimeString);
+  const formattedDate = date.toISOString().slice(0, 10);
+  const formattedTime = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  return `${formattedDate} ${formattedTime}`;
+}
+</script>
