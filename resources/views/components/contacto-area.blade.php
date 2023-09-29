@@ -35,7 +35,7 @@ style="background: url(assets/images/consult-bg.jpg)"
       <div class="row gutter_25px">
         <div class="col-lg-4 col-md-12">
           <div class="theme_btn_all color_one">
-            <a href="contact" class="theme-btn one"> Contactanos </a>
+            <a href="{{ route('web_contacto') }}" class="theme-btn one"> Contactanos </a>
           </div>
         </div>
         <div class="col-lg-8 col-md-12">

@@ -23,10 +23,10 @@
                                         <br>
                                         <ul class="animate_down">
                                             <li class="theme_btn_all color_two">
-                                                <a href="services" class="theme-btn one">Servicios</a>
+                                                <a href="{{ route('web_servicios') }}" class="theme-btn one">Servicios</a>
                                             </li>
                                             <li class="theme_btn_all ">
-                                                <a href="proyectos" class="theme-btn one color_white">Proyectos</a>
+                                                <a href="{{ route('web_proyectos') }}" class="theme-btn one color_white">Proyectos</a>
                                             </li>
                                         </ul>
                                         <br>
