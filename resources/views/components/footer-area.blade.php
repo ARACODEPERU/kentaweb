@@ -205,8 +205,8 @@
             <div class="row text-center">
                 <div class="col-lg-12">
                     <div class="footer_copy_content color_white">
-                        © 2023 <a href="https://aracodeperu.com/" class="color_white">Aracode Perú.</a>
-                        Todos los derechos reservados.
+                        © 2023 kentha Todos los derechos reservados. 
+                        by <a href="https://aracodeperu.com/" class="color_white">Aracode Smart Solutión.</a>
                     </div>
                 </div>
 
