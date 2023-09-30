@@ -5,6 +5,8 @@
     import { faTrashAlt, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
     import Keypad from '@/Components/Keypad.vue';
     import swal from "sweetalert";
+    import * as XLSX from 'xlsx/dist/xlsx.full.min';
+    import jsPDF from 'jspdf';
 
     const props = defineProps({
         subscribers: {
@@ -21,7 +23,30 @@
         search: props.filters.search,
     });
 
-    
+    function downloadExcel(){
+    const workbook = XLSX.utils.book_new();
+
+    // Obtén la tabla HTML que deseas convertir
+    const table = document.getElementById('table_export');
+
+    // Convierte la tabla HTML en una hoja de cálculo
+    const worksheet = XLSX.utils.table_to_sheet(table);
+    worksheet['!cols'] = [
+        {width:12}, // Columna "A" Fecha
+        { width: 25 }, // Columna "B" Nombres
+        {width:25}, // Columna "C" Correos
+        { width: 15 }, // Columna "D" Teléfonos
+        {width: 40}, //Mensajes
+        {width:9}, // Columna "F" 
+        {width:9}, // Columna "G" 
+        {width:9}, // Columna "H" 
+        {width:9}, // Columna "I" 
+    ];
+
+    XLSX.utils.book_append_sheet(workbook, worksheet, form.start+'-'+form.end);
+    XLSX.writeFile(workbook, 'RpteVentas'+form.start+'-'+form.end+'.xlsx');
+}
+
 </script>
 
 <template>
@@ -41,14 +66,17 @@
                         </form>
                         <div class="text-right">
                             <Keypad>
-                                <template #botones>
-                                  
+                                <template #botones>     
+                                    <button v-on:click="downloadExcel()"
+                                    class="inline-block px-6 py-2.5 bg-blue-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                                     >Exportar en Excel
+                                    </button>
                                 </template>
                             </Keypad>
                         </div>
                     </div>
                     <div class="relative overflow-x-auto">
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <table id="table_export" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-gray-700 uppercase bg-gray-100 dark:text-gray-400">
                                 <tr class="border">
                                     <!-- <th scope="col" class="px-6 py-4 border">
@@ -64,7 +92,23 @@
                                     </th>
                                     <th scope="col" class="px-6 py-4">
                                         <div class="flex items-center">
-                                            Suscriptores
+                                            Nombres
+                                            <a href="">
+                                                <img style="max-width: 12px;height: auto;" class="svg-img" src="/icons-svg/clasificar.svg" alt="Descripción de la imagen">
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            Correo
+                                            <a href="">
+                                                <img style="max-width: 12px;height: auto;" class="svg-img" src="/icons-svg/clasificar.svg" alt="Descripción de la imagen">
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            Teléfono
                                             <a href="">
                                                 <img style="max-width: 12px;height: auto;" class="svg-img" src="/icons-svg/clasificar.svg" alt="Descripción de la imagen">
                                             </a>
@@ -100,7 +144,13 @@
                                         {{ formatDateTime(subscriber.created_at) }}
                                     </td>
                                     <td class="border px-6 py-4">
+                                        {{ subscriber.full_name }}
+                                    </td>
+                                    <td class="border px-6 py-4">
                                         {{ subscriber.email }}
+                                    </td>
+                                    <td class="border px-6 py-4">
+                                        {{ subscriber.phone }}
                                     </td>
                                     <!-- <td class="border px-6 py-4">
                                          {{ subscriber.subject }}

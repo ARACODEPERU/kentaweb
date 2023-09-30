@@ -123,7 +123,7 @@ class CmsSubscriberController extends Controller
             $subscribers->where('email', 'like', '%' . request()->input('search') . '%');
         }
         
-        $subscribers = $subscribers->paginate(10)->onEachSide(2)->appends(request()->query());
+        $subscribers = $subscribers->paginate(20)->onEachSide(2)->appends(request()->query());
         
         return Inertia::render('CMS::Subscribers/List', [
             'subscribers' => $subscribers,
