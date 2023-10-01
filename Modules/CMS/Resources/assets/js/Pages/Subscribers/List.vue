@@ -4,9 +4,9 @@
     import Pagination from '@/Components/Pagination.vue';
     import { faTrashAlt, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
     import Keypad from '@/Components/Keypad.vue';
-    import swal from "sweetalert";
+    //import swal from "sweetalert";
     import * as XLSX from 'xlsx/dist/xlsx.full.min';
-    import jsPDF from 'jspdf';
+    //import jsPDF from 'jspdf';
 
     const props = defineProps({
         subscribers: {
@@ -44,7 +44,7 @@
     ];
 
     XLSX.utils.book_append_sheet(workbook, worksheet, form.start+'-'+form.end);
-    XLSX.writeFile(workbook, 'RpteVentas'+form.start+'-'+form.end+'.xlsx');
+    XLSX.writeFile(workbook, 'Suscriptores'+'.xlsx');
 }
 
 </script>
